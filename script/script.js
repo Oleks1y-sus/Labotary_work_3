@@ -138,9 +138,6 @@ const user = {
 
 const btn = document.getElementById('hello');
 
-// Проблема при передачі методу як обробника події this втрачається (буде посилатися на саму кнопку)
-// btn.addEventListener('click', user.say);
-
 // Вирішення 1. Використання стрілкової функції (замикає контекст об'єкта)
 btn.addEventListener('click', () => {
   user.say();
